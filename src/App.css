@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: url(img/simple.jpeg);
+  color: #333; 
+}
+
+
+.App {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff; 
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+/* h1 {
+  font-family: 'Montserrat', sans-serif; 
+  color: #4A148C;
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 24px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+} */
+
+.tima-sage {
+  position: relative; 
+  font-family: 'Helvetica Neue', Arial, sans-serif; 
+  font-size: 48px; 
+  text-align: center; 
+  margin: 10px 0; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  
+}
+
+.tima-sage .sage {
+  position: relative; 
+  color: #333333; 
+  font-weight: 900;
+  font-size: 100px;
+  
+}
+
+.tima-sage .tima {
+  position: absolute;
+  top: 62%;
+  left: 0;
+  width: 100%; 
+  transform: translatey(-50%); 
+  font-size: 20px; 
+  color:#333333; 
+  font-weight: 600; 
+  letter-spacing: 18px;
+  
+  background-color: #ffffff;
+  
+  z-index: 2; 
+}
+
+.tima-sage::before {
+  content: '';
+  position: absolute;
+  top: 62%;
+  left: 0;
+  width: 100%;
+  height: 20px; 
+  background: #ffffff; 
+  transform: translateY(-50%); 
+  z-index: 1; 
+}
+
+
+
+
+
+.chat-display {
+  border: none;
+  border-radius: 20px;
+  padding: 20px;
+  max-height: 600px;
+  overflow-y: auto;
+  background: #f9f9f9; 
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.9); 
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.message-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.user-message, .bot-message {
+  padding: 15px 20px;
+  border-radius: 25px;
+  max-width: 75%;
+  word-wrap: break-word;
+  line-height: 1.5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); 
+}
+
+.user-message {
+  background: #6a1b9a; 
+  color: #ffffff; 
+  align-self: flex-end; 
+  border-radius: 25px 25px 0 25px; 
+}
+
+.bot-message {
+  background: #e3f2fd; 
+  color: #333; 
+  align-self: flex-start; 
+  border-radius: 25px 25px 25px 0; 
+}
+
+
+.media-container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.media-item {
+  border-radius: 15px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media-item:hover {
+  transform: scale(1.02); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+
+.lesson-content, .quiz-content, .explanation-content {
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 15px;
+  background: #ffffff; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: background-color 0.3s ease;
+}
+
+.lesson-content:hover, .quiz-content:hover, .explanation-content:hover {
+  background-color: #f0f0f0; 
+}
+
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+textarea {
+  padding: 15px;
+  border: none;
+  border-radius: 20px;
+  background: #ffffff; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  line-height: 1.5;
+  resize: none;
+  transition: box-shadow 0.3s ease;
+}
+
+textarea:focus {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+  outline: none;
+}
+
+
+
+/* button {
+  padding: 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: #6a1b9a; 
+  color: #ffffff; 
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #4a148c; 
+  transform: scale(1.05); 
+}
+
+button:disabled {
+  background-color: #bdbdbd; 
+  cursor: not-allowed;
+} */
+
+button {
+  padding: 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: #6a1b9a; 
+  color: #ffffff; 
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #4a148c;
+  transform: scale(1.05); 
+}
+
+button:disabled {
+  background-color: #bdbdbd; 
+  cursor: not-allowed;
+}
+
+.icon {
+  margin-right: 8px; 
+}
+
